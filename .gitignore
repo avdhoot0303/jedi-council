@@ -1,16 +1,14 @@
-# Python
+# Ignore PyCharm project settings
+.idea/
+
+# Ignore Python cache
 __pycache__/
 *.pyc
 
-# Virtual Environment
-venv/
-env/
+# Ignore packaging files
+*.egg-info/
+dist/
+build/
+
+# Ignore .env with keys
 .env
-
-# Secrets
-*.env
-
-# IDE & OS files
-.vscode/
-.idea/
-.DS_Store

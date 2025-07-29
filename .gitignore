@@ -3,6 +3,8 @@
 # Ignore Python cache
 __pycache__/
 *.pyc
+# Ignore benchmark run logs
+benchmark_runs/*.csv
 
 # Ignore packaging files
 *.egg-info/

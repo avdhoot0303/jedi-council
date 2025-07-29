@@ -6,7 +6,7 @@ import logging
 import abc
 from dataclasses import dataclass
 from typing import List, Dict, Any, Optional
-from jedi_council.utils import estimate_cost
+from jedi_council.utils.utils import estimate_cost
 # --- Use official clients ---
 from openai import OpenAI
 from anthropic import Anthropic

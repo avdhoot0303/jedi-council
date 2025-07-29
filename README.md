@@ -1,4 +1,9 @@
 # The Jedi Council – Unified LLM Prompting & Benchmarking Framework
+[![License](https://img.shields.io/github/license/avdhoot0303/jedi-council)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
+[![Issues](https://img.shields.io/github/issues/avdhoot0303/jedi-council)](https://github.com/avdhoot0303/jedi-council/issues)
+[![Stars](https://img.shields.io/github/stars/avdhoot0303/jedi-council?style=social)](https://github.com/avdhoot0303/jedi-council/stargazers)
+[![Last Commit](https://img.shields.io/github/last-commit/avdhoot0303/jedi-council)](https://github.com/avdhoot0303/jedi-council/commits/main)
 
 **“When in doubt, consult the Council.”**
 

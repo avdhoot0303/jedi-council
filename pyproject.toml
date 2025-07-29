@@ -22,5 +22,6 @@ dependencies = [
     "openai",
     "anthropic",
     "google-generativeai",
-    "python-dotenv"
+    "python-dotenv",
+    "mistralai"
 ]

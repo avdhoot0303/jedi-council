@@ -105,12 +105,49 @@ Try running the following to test all configured models:
 python example.py
 ```
 
+---
 
-This will broadcast the same prompt to all providers (OpenAI, Anthropic, Mistral, Gemini) and print:
-- Their responses
-- Token usage (input/output)
-- Estimated cost per call
-- Latency (ms)
+### Benchmarking Support
+
+To compare model performance across real tasks, you can run:
+
+```bash
+python benchmark/benchmarking_suite.py
+```
+
+This will:
+- Run a suite of predefined tasks across all available LLMs
+- Log model outputs, token usage, latency, and cost
+- Save detailed results in `logs/benchmark_results.csv`
+
+You can analyze the results using pandas or any visualization tool:
+
+```python
+import pandas as pd
+
+df = pd.read_csv("logs/benchmark_results.csv")
+print(df.groupby("model")["cost"].mean())
+```
+
+You can also track performance by task category or sort by latency:
+
+```python
+df.groupby(["model", "task_name"])["latency_ms"].mean().unstack().plot(kind="bar")
+```
+
+#### Sample Benchmarking Output
+
+Here's a sample summary of average latency (in ms) for different models across task categories:
+
+| Task                  | GPT-4o | Claude-3 | Gemini | Mistral |
+|-----------------------|--------|----------|--------|---------|
+| Ambiguity Resolution  | 13528  | 4175     | 4390   | 5308    |
+| Code Generation       | 17870  | 4091     | 3741   | 10309   |
+| Logical Reasoning     | 13463  | 1630     | 1890   | 4002    |
+| Summarization         | 10132  | 814      | 608    | 799     |
+| Time Zone Reasoning   | 11085  | 1019     | 777    | 1712    |
+
+This table highlights latency performance trends across various LLMs for core reasoning and generation tasks.
 
 ---
 
@@ -123,7 +160,7 @@ This will broadcast the same prompt to all providers (OpenAI, Anthropic, Mistral
   ```
 - Streaming & parallel inference
 - LLaMA and Cohere provider integration
-- Output visualizations (token bar, cost heatmap, model latency ranking)
+- Output visualizations (token bar, cost heatmap, model latency ranking) ✅ CSV logging added
 
 ---
 

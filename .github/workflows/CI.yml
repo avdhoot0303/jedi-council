@@ -1,6 +1,8 @@
 name: CI
 
 on: [push, pull_request]
+env:
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
 jobs:
   test:

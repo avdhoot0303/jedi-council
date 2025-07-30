@@ -22,6 +22,9 @@ This project provides a clean, extensible framework for interacting with multipl
 
 ---
 
+# Basic usage:
+[![asciicast](https://asciinema.org/a/euFO68LNmDOdSxzhgdNQABYf2.svg)](https://asciinema.org/a/euFO68LNmDOdSxzhgdNQABYf2)
+
 ## Installation
 
 ### 1. Clone and install in editable mode

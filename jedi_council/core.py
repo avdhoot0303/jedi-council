@@ -35,7 +35,7 @@ class UsageInfo:
     """Stores token usage and cost information."""
     input_tokens: int
     output_tokens: int
-    cost: Optional[float] = None
+    cost: Optional[float] = 0.00
 
 
 @dataclass
@@ -163,8 +163,8 @@ class _AnthropicProvider(LlmProvider):
             usage=UsageInfo(
                 input_tokens=response.usage.input_tokens,
                 output_tokens=response.usage.output_tokens,
-                cost=estimate_cost(self.model, input_tokens=response.usage.prompt_tokens,
-                                   output_tokens=response.usage.completion_tokens),
+                cost=estimate_cost(self.model, input_tokens=response.usage.input_tokens,
+                                   output_tokens=response.usage.output_tokens),
 
             ),
             latency_ms=latency_ms,

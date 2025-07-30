@@ -16,8 +16,6 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
-
-# Add your project's dependencies here
 dependencies = [
     "openai",
     "anthropic",
@@ -25,3 +23,6 @@ dependencies = [
     "python-dotenv",
     "mistralai"
 ]
+
+[tool.setuptools]
+packages = ["jedi_council"]

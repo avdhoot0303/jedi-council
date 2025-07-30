@@ -4,6 +4,7 @@
 [![Issues](https://img.shields.io/github/issues/avdhoot0303/jedi-council)](https://github.com/avdhoot0303/jedi-council/issues)
 [![Stars](https://img.shields.io/github/stars/avdhoot0303/jedi-council?style=social)](https://github.com/avdhoot0303/jedi-council/stargazers)
 [![Last Commit](https://img.shields.io/github/last-commit/avdhoot0303/jedi-council)](https://github.com/avdhoot0303/jedi-council/commits/main)
+[![CI](https://github.com/avdhoot0303/jedi-llm-gateway/actions/workflows/CI.yml/badge.svg)](https://github.com/avdhoot0303/jedi-llm-gateway/actions/workflows/CI.yml)
 
 **“When in doubt, consult the Council.”**
 
@@ -22,8 +23,7 @@ This project provides a clean, extensible framework for interacting with multipl
 
 ---
 
-# Basic usage:
-[![asciicast](https://asciinema.org/a/euFO68LNmDOdSxzhgdNQABYf2.svg)](https://asciinema.org/a/euFO68LNmDOdSxzhgdNQABYf2)
+
 
 ## Installation
 
@@ -48,6 +48,7 @@ MISTRAL_API_KEY=sk-mistral-...
 GOOGLE_API_KEY=AIza...
 ```
 Make sure you have a .env loader if you’re running scripts directly. Otherwise, export env vars before execution.
+
 
 ---
 ### Inspiration
@@ -89,6 +90,18 @@ This tool evolved from a research pipeline designed to automate UI tasks using L
    print("Latency:", f"{int(response.latency_ms)}ms") 
    ```
 
+### ⚙️ Custom Configuration
+
+You can pass system prompts, temperature, and more:
+
+```python
+council = TheJediCouncil(
+  model="gpt-4o",
+  system_prompt="You are a wise Jedi master.",
+  temperature=0.2,
+)
+```
+
 ### Example Output
 
 ```
@@ -106,6 +119,16 @@ Try running the following to test all configured models:
 
 ```bash
 python example.py
+```
+
+---
+
+### 🧰 CLI Prompt Runner (Beta)
+
+Try this to query a model from terminal:
+
+```bash
+python run_prompt.py --model gpt-4o --prompt "Tell me a Yoda quote"
 ```
 
 ---
@@ -167,9 +190,50 @@ This table highlights latency performance trends across various LLMs for core re
 
 ---
 
-Contributing
 
-Feel free to fork, extend, or open PRs! New provider wrappers, better token tracking, and more benchmarks are all welcome.
+## 🤝 Contributing
 
+We welcome contributions from Jedi and Padawans alike! If you have ideas for new features, improvements, or new LLM integrations, feel free to open an issue or a pull request.
 
-License MIT — use freely, contribute kindly
+### How to Contribute
+
+1. ⭐ Star this repository to support the project.
+2. Fork the repo and create a new branch:  
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Write clear, tested code and include helpful commit messages.
+4. Make sure all tests pass: 
+ 🧪 Running Tests
+
+Run unit tests locally:
+
+```bash
+pytest --cov=jedi_council --cov-report=term-missing
+```
+
+Make sure new features include test coverage.
+ 
+5. Submit a pull request and describe your changes in detail.
+
+> May the source be with you.
+
+---
+
+## 🙏 Acknowledgements
+
+- Built by [Avdhoot Patil](https://github.com/avdhoot0303) as part of advanced LLM experimentation and research.
+- Inspired by research needs in UI automation, prompt optimization, and agent evaluation.
+- Big thanks to contributors and the open-source community for tools like `openai`, `anthropic`, `google-generativeai`, and `mistralai`.
+
+---
+
+## 👾 Community
+
+Join the Jedi Dev Discord: [coming soon]
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License — use freely, contribute kindly.

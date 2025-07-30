@@ -24,5 +24,14 @@ dependencies = [
     "mistralai"
 ]
 
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-mock",
+  "pytest-cov",         # For coverage reporting (optional)
+  "ruff"                # For linting (optional)
+]
+#you could use pip install -e .[dev] if you're contributing and running CI.
+
 [tool.setuptools]
 packages = ["jedi_council"]
